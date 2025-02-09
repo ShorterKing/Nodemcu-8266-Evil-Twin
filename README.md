@@ -16,8 +16,8 @@ This is a **fully functional** WiFi Evil Twin attack using **NodeMCU ESP8266** t
 ✅ **Customizable SSID & Captive Portal** page
 ✅ **Logs captured passwords** for analysis
 ✅ **Lightweight and runs on NodeMCU ESP8266**
-✅ **Restarts the original access point upon correct password entry**
-✅ **View captured credentials by reconnecting to the original network or visiting `/admin`**
+✅ **Restarts original access point when the correct password is entered**
+✅ **Captured credentials can be accessed via `/admin` on the AP or by connecting to the restored network**
 
 ---
 
@@ -57,11 +57,16 @@ This is a **fully functional** WiFi Evil Twin attack using **NodeMCU ESP8266** t
 
 ## 🛠 Usage
 1. **Power on** the ESP8266 module.
-2. The fake WiFi network (Evil Twin) will appear.
+2. The fake WiFi network (Evil Twin) will appear with the default SSID:
+   ```
+   WiFi.softAP("Hostspot-ET", "EvilTwin8266");
+   ```
+   *(You can change this in the code)*
 3. When a victim connects, they will be redirected to the **captive portal**.
 4. Once they enter their **WiFi password**, it is logged and stored.
-5. If the password is correct, the **NodeMCU restarts the original access point**.
-6. You can check the captured credentials by **connecting to the original network** or visiting `/admin` on the access point.
+5. If the password is correct, **NodeMCU restarts the original access point**.
+6. The captured credentials can be accessed by connecting to the restored network **or visiting `/admin` on the AP**.
+7. The main page IP address is **172.0.0.1**.
 
 ---
 
