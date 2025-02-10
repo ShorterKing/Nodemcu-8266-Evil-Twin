@@ -46,12 +46,19 @@ This is a **fully functional** WiFi Evil Twin attack using **NodeMCU ESP8266** t
 6. Click **Upload** and wait for the process to complete.
 
 ### 📌 Method 2: Flash Prebuilt Release (Recommended)
-1. Download the latest **.bin** release from the [Releases](https://github.com/YOUR_GITHUB_USERNAME/WiFi-Evil-Twin/releases) page.
+1. Download the latest **.bin** release from the [Releases](https://github.com/ShorterKing/Nodemcu-8266-Evil-Twin/releases/tag/Release) page.
 2. Use **esptool.py** or any ESP8266 flasher to flash the firmware:
    ```bash
    esptool.py --port /dev/ttyUSB0 write_flash -fm dio 0x00000 firmware.bin
    ```
    *(Replace `/dev/ttyUSB0` with the correct port)*
+
+### 📌 Method 3: Flash Using Web Flasher (Easiest)
+1. Download the latest **.bin** release from the [Releases](https://github.com/ShorterKing/Nodemcu-8266-Evil-Twin/releases/tag/Release) page.
+2. Open **[ESP Web Flasher](https://esp.huhn.me/)** in your browser.
+3. Connect your **ESP8266 NodeMCU** to your computer via USB.
+4. Click **Connect**, select the correct **COM port**, and choose the downloaded `.bin` file.
+5. Click **Flash** and wait for the process to complete.
 
 ---
 
